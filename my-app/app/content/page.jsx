@@ -14,7 +14,7 @@ function Content() {
       alert("Please fill in all fields");
       return;
     }
-    const result = await supabase.from("supa_base").insert({ name, password });
+    const result = await supabase.from("supa_base").update({ name, password }).eq("id", 1);
     console.log(result);
   };
 
